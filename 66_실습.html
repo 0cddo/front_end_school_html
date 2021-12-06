@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float_실습</title>
+    <style>
+      .top {
+        background-color: dodgerblue;
+        /* width: 100%; */
+        height: 150px;
+      }
+      .left {
+        float: left;
+        width: 33.3333%;
+        height: 150px;
+        background-color: green;
+      }
+      .center {
+        float: left;
+        width: 33.333%;
+        height: 150px;
+        background-color: red;
+      }
+      .right {
+        float: right;
+        width: 33.333%;
+        height: 150px;
+        background-color: purple;
+      }
+      .bottom {
+        /* bottom이 main을 알아봐야하기 때문에 bottom에 clear:both; 적용 */
+        clear: both;
+        background-color: yellow;
+        /* width: 100%; */
+        height: 150px;
+      }
+      /* .footer::after {
+        display: block;
+        content: "";
+        clear: both;
+      } */
+      /* .float-wrap::after {
+        display: block;
+        content: "";
+        clear: both;
+      } */
+    </style>
+  </head>
+  <body>
+    <head>
+      <section class="top"></section>
+    </head>
+    <main class="float-wrap">
+      <section class="left"></section>
+      <section class="center"></section>
+      <section class="right"></section>
+    </main>
+    <footer>
+      <section class="bottom"></section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        background-color: tomato;
+      }
+      .container {
+        /* 미디어쿼리 아니고 flex로 반응형 효과 낼 수 있음 */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-sizing: border-box;
+        border: 10px solid red;
+        height: 500px;
+        width: 100%;
+        background-color: yellow;
+      }
+
+      @media screen and (max-width: 800px) {
+        /* 1000px 일 때까지는 아래의 내용이다!! */
+        /* css를 재정의하지 않는한 그대로 컨테이너 가져옴 */
+        body {
+          background-color: green;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        /* 1000px 일 때까지는 아래의 내용이다!! */
+        body {
+          background-color: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <div class="container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fugit ea
+        eligendi in, dolorem quae perferendis veritatis voluptatum odit ratione
+        et delectus alias exercitationem officia vitae. Facere quae repellendus
+        repudiandae!
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fugit ea
+        eligendi in, dolorem quae perferendis veritatis voluptatum odit ratione
+        et delectus alias exercitationem officia vitae. Facere quae repellendus
+        repudiandae!
+      </div>
+    </div>
+  </body>
+</html>

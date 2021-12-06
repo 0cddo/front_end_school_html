@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+    <style>
+      @keyframes rising {
+      }
+
+      /* .btn_container {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(165, 143, 218);
+      } */
+      @keyframes rainbow {
+        0%,
+        100% {
+          background-position: 0 0;
+        }
+
+        50% {
+          background-position: 100% 0;
+        }
+      }
+
+      .btn {
+        width: 300px;
+        height: 120px;
+        background-color: #fff;
+        border: solid 3px #333;
+        color: #333;
+        font-weight: 600;
+        font-size: 32px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 30px;
+        margin: 100px;
+        overflow: hidden;
+      }
+      .btn:hover::before {
+        animation: rainbow 6s ease-in-out infinite;
+      }
+      .btn::before {
+        position: absolute;
+        top: 0;
+        left: 100;
+        width: 300px;
+        height: 120px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        content: "Hello World!";
+        color: #fff;
+        font-weight: bold;
+        background-image: linear-gradient(
+          to left,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn_container"><div class="btn">Click Me!</div></div>
+  </body>
+</html>

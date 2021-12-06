@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position sticky</title>
+    <style>
+      section {
+        height: 1000px;
+        border: 3px solid black;
+      }
+      h2 {
+        /* sticky 나온지 얼마 안됨, -web-뭐 벤더 뭐시기 필요함 */
+        position: -webkit-sticky;
+        position: sticky;
+        /* position static이랑 비슷, 움직이지 않음 
+        자신의 offset, 임계점을 넘길 때, 부모 요소의 위치가 화면에서 사라질 때 사라짐, */
+        /* 컨텐츠가 사라지기 전까지 제목을 보여줄 수 있다? */
+        top: 100px;
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>sticky test</h1>
+    <section>
+      <h2>1. 오늘의 점심 메뉴</h2>
+      <ul>
+        <li>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+          aliquid dicta doloribus repellendus sed, eligendi, voluptatibus eius
+          soluta libero at laboriosam natus hic ad explicabo commodi. Asperiores
+          numquam, in cupiditate sint at expedita non inventore, omnis
+          voluptatum quos quo molestiae debitis a tempora aspernatur. Ipsam
+          asperiores assumenda minus quo dignissimos nemo quae porro minima
+          suscipit ab, sint odit? Architecto mollitia non consequatur quod quis
+          autem nam illum minima praesentium, cupiditate nostrum a modi? Minus
+          quidem voluptatum voluptatibus ad veniam eaque vel quis corporis
+          explicabo, sint dicta aliquam maxime cum omnis officiis id sit
+          consequatur inventore ut consequuntur dolore asperiores. Mollitia.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          aliquid numquam similique ea magni mollitia eius eligendi fugiat iure?
+          Architecto, explicabo illo. Voluptas, ipsa quis. Consectetur, omnis
+          sunt! Ullam tempore, fuga praesentium minima sunt sit vitae nesciunt
+          delectus sed expedita suscipit odit maxime. Nisi blanditiis ipsam
+          error explicabo quam laboriosam perferendis? Praesentium veritatis,
+          labore cum, iure pariatur alias officiis similique incidunt
+          exercitationem velit ad qui numquam mollitia laborum obcaecati enim
+          sequi repudiandae reiciendis! Tenetur, laborum blanditiis esse
+          voluptas, minus optio numquam quidem consequatur quas maxime magni
+          necessitatibus odit debitis non corrupti laboriosam enim iste fugit in
+          aut assumenda repellat earum.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum
+          eaque temporibus! Ullam quos aperiam molestiae repellendus quis eius!
+          Maiores optio id rerum tempore, voluptatibus modi nostrum quia quo
+          voluptas? Velit laudantium mollitia magnam explicabo assumenda, saepe
+          sit ad, vitae error adipisci quidem vero distinctio? Odit nam incidunt
+          voluptatum laboriosam ducimus eveniet illo fugit, nobis cum. Officiis
+          sit facilis quidem beatae perferendis ex quisquam laboriosam
+          laudantium magnam assumenda quas velit sunt, eveniet, fugit temporibus
+          fuga officia amet aspernatur. Quibusdam vero quas neque aliquid,
+          excepturi minus consequuntur. Provident autem natus laborum iusto
+          architecto iste impedit, non reprehenderit adipisci nulla unde atque.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>2. 내일의 저녁 메뉴</h2>
+      <ul>
+        <li>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+          aliquid dicta doloribus repellendus sed, eligendi, voluptatibus eius
+          soluta libero at laboriosam natus hic ad explicabo commodi. Asperiores
+          numquam, in cupiditate sint at expedita non inventore, omnis
+          voluptatum quos quo molestiae debitis a tempora aspernatur. Ipsam
+          asperiores assumenda minus quo dignissimos nemo quae porro minima
+          suscipit ab, sint odit? Architecto mollitia non consequatur quod quis
+          autem nam illum minima praesentium, cupiditate nostrum a modi? Minus
+          quidem voluptatum voluptatibus ad veniam eaque vel quis corporis
+          explicabo, sint dicta aliquam maxime cum omnis officiis id sit
+          consequatur inventore ut consequuntur dolore asperiores. Mollitia.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          aliquid numquam similique ea magni mollitia eius eligendi fugiat iure?
+          Architecto, explicabo illo. Voluptas, ipsa quis. Consectetur, omnis
+          sunt! Ullam tempore, fuga praesentium minima sunt sit vitae nesciunt
+          delectus sed expedita suscipit odit maxime. Nisi blanditiis ipsam
+          error explicabo quam laboriosam perferendis? Praesentium veritatis,
+          labore cum, iure pariatur alias officiis similique incidunt
+          exercitationem velit ad qui numquam mollitia laborum obcaecati enim
+          sequi repudiandae reiciendis! Tenetur, laborum blanditiis esse
+          voluptas, minus optio numquam quidem consequatur quas maxime magni
+          necessitatibus odit debitis non corrupti laboriosam enim iste fugit in
+          aut assumenda repellat earum.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum
+          eaque temporibus! Ullam quos aperiam molestiae repellendus quis eius!
+          Maiores optio id rerum tempore, voluptatibus modi nostrum quia quo
+          voluptas? Velit laudantium mollitia magnam explicabo assumenda, saepe
+          sit ad, vitae error adipisci quidem vero distinctio? Odit nam incidunt
+          voluptatum laboriosam ducimus eveniet illo fugit, nobis cum. Officiis
+          sit facilis quidem beatae perferendis ex quisquam laboriosam
+          laudantium magnam assumenda quas velit sunt, eveniet, fugit temporibus
+          fuga officia amet aspernatur. Quibusdam vero quas neque aliquid,
+          excepturi minus consequuntur. Provident autem natus laborum iusto
+          architecto iste impedit, non reprehenderit adipisci nulla unde atque.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>3. 오늘의 저녁 메뉴</h2>
+      <ul>
+        <li>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+          aliquid dicta doloribus repellendus sed, eligendi, voluptatibus eius
+          soluta libero at laboriosam natus hic ad explicabo commodi. Asperiores
+          numquam, in cupiditate sint at expedita non inventore, omnis
+          voluptatum quos quo molestiae debitis a tempora aspernatur. Ipsam
+          asperiores assumenda minus quo dignissimos nemo quae porro minima
+          suscipit ab, sint odit? Architecto mollitia non consequatur quod quis
+          autem nam illum minima praesentium, cupiditate nostrum a modi? Minus
+          quidem voluptatum voluptatibus ad veniam eaque vel quis corporis
+          explicabo, sint dicta aliquam maxime cum omnis officiis id sit
+          consequatur inventore ut consequuntur dolore asperiores. Mollitia.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          aliquid numquam similique ea magni mollitia eius eligendi fugiat iure?
+          Architecto, explicabo illo. Voluptas, ipsa quis. Consectetur, omnis
+          sunt! Ullam tempore, fuga praesentium minima sunt sit vitae nesciunt
+          delectus sed expedita suscipit odit maxime. Nisi blanditiis ipsam
+          error explicabo quam laboriosam perferendis? Praesentium veritatis,
+          labore cum, iure pariatur alias officiis similique incidunt
+          exercitationem velit ad qui numquam mollitia laborum obcaecati enim
+          sequi repudiandae reiciendis! Tenetur, laborum blanditiis esse
+          voluptas, minus optio numquam quidem consequatur quas maxime magni
+          necessitatibus odit debitis non corrupti laboriosam enim iste fugit in
+          aut assumenda repellat earum.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum
+          eaque temporibus! Ullam quos aperiam molestiae repellendus quis eius!
+          Maiores optio id rerum tempore, voluptatibus modi nostrum quia quo
+          voluptas? Velit laudantium mollitia magnam explicabo assumenda, saepe
+          sit ad, vitae error adipisci quidem vero distinctio? Odit nam incidunt
+          voluptatum laboriosam ducimus eveniet illo fugit, nobis cum. Officiis
+          sit facilis quidem beatae perferendis ex quisquam laboriosam
+          laudantium magnam assumenda quas velit sunt, eveniet, fugit temporibus
+          fuga officia amet aspernatur. Quibusdam vero quas neque aliquid,
+          excepturi minus consequuntur. Provident autem natus laborum iusto
+          architecto iste impedit, non reprehenderit adipisci nulla unde atque.
+        </li>
+      </ul>
+      l
+    </section>
+  </body>
+</html>

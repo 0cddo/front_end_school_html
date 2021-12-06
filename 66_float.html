@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+    <style>
+      ul {
+        /* overflow: hidden; */
+        /* display:inline-block; */
+      }
+
+      /* clear fix */
+      /* before, after는 가상의 자식 요소 생성 */
+      ul::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      li {
+        height: 100px;
+        background: pink;
+      }
+      li:nth-child(2) {
+        /* box가 떠서 사라져버림, float을 주면 넓이값을 준 것이 사라짐, 넓이값을 따로 줘야함, */
+        float: left;
+        width: 50%;
+        background: dodgerblue;
+      }
+      /* li:nth-child(3) {
+        clear: left;
+        /* float 형제 레벨을 확인하게 됨 
+      } */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

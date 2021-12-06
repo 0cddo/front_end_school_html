@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변 크기 단위</title>
+    <style>
+      html,
+      body {
+        font-size: 10px;
+      }
+      p {
+        /* 부모의 배수 단위 , body에서 가져온 폰트의 2배 */
+        font-size: 2em;
+        font-weight: 700;
+      }
+      div {
+        font-size: 2em;
+      }
+      .one {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <p>hello world</p>
+
+    <!-- em, %, rem, vw, vh -->
+    <!--  상황에 맞게 단위를 사용,  -->
+
+    <!-- em은 부모가 가진 폰트사이즈를 배수함 -->
+    <div>
+      <!-- 10 * 2 20px -->
+      <div>
+        <!-- 20 * 2 40px -->
+        <div>
+          <!-- 40 * 2 80px -->
+          hello world
+        </div>
+      </div>
+    </div>
+
+    <!-- rem은 코드 중첩에 상관없이 html을 기준으로 함 -->
+    <div>
+      <div>
+        <div class="one">hello world rem</div>
+      </div>
+    </div>
+  </body>
+</html>

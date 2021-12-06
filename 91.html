@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @keyframes hello {
+        0% {
+          top: 0;
+        }
+        50% {
+          top: 30px;
+          left: 20px;
+        }
+        50% {
+          top: 10px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: violet;
+        animation-name: hello;
+        animation: 6s linear infinite;
+      }
+      /* div:hover {
+        animation: hello all 6s ease-in;
+      } */
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div>hello</div>
+  </body>
+</html>

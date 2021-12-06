@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>글자 무빙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      /* reset */
+      body,
+      h1,
+      h2,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      /* animation */
+      /* @keyframes 움직여 {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(100px, 0px) rotate(360deg);
+        }
+        100% {
+          transform: translate(100px, 100px) rotate(360deg);
+        }
+      } */
+      body {
+        background: #000;
+        font-family: "Pacifico", cursive;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        animation: 움직여 2s;
+        border: none;
+      }
+      .name {
+        margin: 100px;
+        font-size: 50px;
+        text-align: center;
+        color: #eee;
+      }
+      .name-job {
+        position: relative;
+        height: 100px;
+        line-height: 100px;
+        /* 자기를 넘어서는 것을 가림  */
+        overflow: hidden;
+      }
+
+      /* blur 처리하기 */
+      .name-job::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 10px 10px #111;
+      }
+
+      .name-job-list {
+        animation: 돌아 4s infinite ease;
+      }
+      .name-title {
+        color: deeppink;
+      }
+      @keyframes 돌아 {
+        0% {
+          transform: translateY(0px);
+        }
+        25% {
+          transform: translateY(-20%);
+        }
+        50% {
+          transform: translateY(-40%);
+        }
+        75% {
+          transform: translateY(-80%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="name">
+      I'm a
+      <div class="name-job">
+        <ul class="name-job-list">
+          <li>Computer Scientist</li>
+          <li>Programmer</li>
+          <li>Tutor</li>
+          <li>Developer</li>
+          <!-- 끊기는 느낌을 덜 받기 위해 트릭 줌  -->
+          <li>Computer Scientist</li>
+        </ul>
+      </div>
+      <h2 class="name-title">Licat</h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자 슬라이드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* animation */
+      @keyframes 돌아 {
+        0% {
+          transform: translateY(0);
+        }
+        12.5% {
+          transform: translateY(-20%);
+        }
+        25% {
+          transform: translateY(-40%);
+        }
+        37.5% {
+          transform: translateY(-60%);
+        }
+        50% {
+          transform: translateY(-80%);
+        }
+        65.5% {
+          transform: translateY(-80%);
+        }
+        80.5% {
+          transform: translateY(-100%);
+        }
+      }
+
+      /* reset */
+      body,
+      h1,
+      h2,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      /* style */
+      body {
+        background: #111;
+        font-family: "Nanum Pen Script", cursive;
+      }
+
+      .music {
+        margin: 100px;
+        font-size: 50px;
+        text-align: center;
+        color: #999;
+      }
+      .today {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .music-play {
+        position: relative;
+        height: 100px;
+        line-height: 100px;
+        overflow: hidden;
+        color: white;
+      }
+
+      .music-play::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 10px 10px #111;
+      }
+
+      .music-play-list {
+        animation: 돌아 5s infinite;
+      }
+
+      .btn {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        background-color: deeppink;
+        display: inline-block;
+        box-shadow: none;
+        border-radius: 30px;
+        border: none;
+        color: #eee;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="music">
+      <p>👩‍🎤심디-Tody Play List</p>
+      <div class="music-play">
+        <!-- <div class="today">
+          <p class="date">11월 8일</p>
+          <p class="weather">Rainy day ☔️</p>
+        </div> -->
+        <ul class="music-play-list">
+          <li>Justin Vasquez - Stick With You</li>
+          <li>Peder Elias - Bonfire</li>
+          <li>Jesse Barrera - Casual</li>
+          <li>Emotional Orange - Sundays</li>
+          <li>에픽하이 - 비 오는 날 듣기 좋은 노래</li>
+          <li>윤하 - 우산</li>
+          <li>소울스타 - 비오는 거리</li>
+          <li>honne - no song without you</li>
+          <li>Justin Vasquez - Stick With You</li>
+        </ul>
+      </div>
+      <div class="today">
+        <p class="date">11월 8일</p>
+        <p class="weather">Rainy day ☔️</p>
+      </div>
+      <button class="btn">add more music</button>
+    </div>
+  </body>
+</html>
